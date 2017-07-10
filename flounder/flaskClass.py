@@ -40,20 +40,19 @@ def allowed_file(filename):
 @app.route('/login', methods=['POST','GET'])
 def login():
     error = None
-    print >> sys.stderr, "we are in login" 
+    
 
     if request.method == 'POST':
-        print >> sys.stderr, "we are in if post"
+        
 
         if (isValid(request.form['userid'], request.form['password']) and (request.form['userid']=='wgreelish' or request.form['userid']=='mwojtyna' or request.form['userid']=='dsmolinski' or request.form['userid']=='icornelius')):
-            print >> sys.stderr, "to admin we go"
+           
             return redirect(url_for('adminHome'))
                     
         
         elif isValid(request.form['userid'], request.form['password']):
         
-            print >> sys.stderr, "we are in isvalid"
-            
+          
             return signedinHome()
             
             
@@ -64,14 +63,14 @@ def login():
 
 @app.route('/adminHome', methods=['POST','GET'])
 def adminHome():
-    print >>sys.stderr, "we are in adminHOme"
+    
     error = None
     userLogged = userLog
     userdao = UserDao()
     dao = PostingDao()
     postings = dao.selectAll()
     if('deleteAll' in request.form):
-        print >>sys.stderr, "we are in delete"
+        
         session['value'] = request.form['deleteAll']
         return deleteAll()
     else:
@@ -91,7 +90,7 @@ def signedinHome():
                     
 
 def isValid(userid, password):
-    print >> sys.stderr, "we are in isvalid"
+    
     global userLog
     userLog = userid
     dao = UserDao()
@@ -103,7 +102,7 @@ def isValid(userid, password):
         return False
 
 def isValidUsername(userid):
-    print >> sys.stderr,'hey we are in isvalidusername'
+   
     userLog = userid
     dao = UserDao()
     user = dao.selectByUserid(userid)
@@ -123,15 +122,15 @@ def id_generator(size=25, chars=string.ascii_uppercase + string.digits):
 def createaccount():
     error = None
     dao = UserDao()
-    print >> sys.stderr, "in createaccount method"
+   
 
     if request.method == 'POST':
-        print >> sys.stderr, "made it to post in createaccount"
+        
         if request.form['password'] == request.form['confirmPassword']:
-            print >> sys.stderr, "made it to password comparison"
+            
             if request.form['userid'] and request.form['password'] and request.form['email']:
                 if dao.selectByUserid(request.form['userid']) is not None:
-                    print >> sys.stderr, "we are in dao.selectByUserid"
+                    
                 else:
                     
                     newUser = User(request.form['userid'], request.form['password'], request.form['email'])
@@ -145,7 +144,7 @@ def createaccount():
     return render_template('createaccount.html', **locals())
 
 def deleteAll():
-    print >> sys.stderr, "in delete method"
+    
     
     error = None
     dao = PostingDao()
@@ -268,7 +267,7 @@ def adminfoundit():
             return redirect(request.url)
         elif file and allowed_file(file.filename):
             
-            print >> sys.stderr, "there is a pic" 
+            
             filename=secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'],str(newPosting.value) + ".png"))
             return redirect(url_for('adminfoundPosting',filename=filename))

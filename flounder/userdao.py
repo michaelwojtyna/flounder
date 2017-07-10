@@ -21,7 +21,7 @@ class UserDao:
         result = None
 
         if (rows is None):
-            print >> sys.stderr, "rows is none"
+           
             print('UserDao:selectByUserid failed to find user with ' + userid)
             result = None
         else:
