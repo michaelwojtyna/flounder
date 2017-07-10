@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<hmtl>
+  <head>
+    <link rel="stylesheet" type="text/css" href="static/floundercss2.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Flounder.</title>
+  </head>
+  
+    <body>
+        <h1>What did you lose?</h1>
+        
+        <div class="center3">
+          <form id="form"  method="POST">
+	    <p>Date:<br>
+	      <input name="date" type="date" value="mm/dd/yyyy" required></p>
+	    
+            <p>Item:<br>
+
+	      <input list="lostitems" type="text" name="item" required>
+	      <datalist id="lostitems">
+		<option value="Wallet"/>
+		<option value="Headphones"/>
+		<option value="Jewelery"/>
+		<option value="Phone"/>
+		<option value="Laptop"/>
+		<option value="Backpack"/>
+		<option value="Keys"/>
+		<option value="Glasses"/>
+	      </datalist>
+	                  </input>
+	    </p>
+	    
+            <p contenteditable="true" spellcheck="true">Description:<br>
+              <textarea placeholder="Write a brief description of the object."  id="textarea" rows="5" cols="50" name="description"></textarea required></p>
+	    <p contenteditable="true" spellcheck="true">Message:<br>
+	      <textarea placeholder="Write a brief message about where you lost the item." id="textarea" rows="5" cols="50" name="message" required></textarea></p>
+	    
+
+	    
+                
+            <input class="hvr-bubble-right" type="submit" value="Post">
+            </form> 
+        </div>
+
+	
+	
+	
+        
+        <div class="center3">
+        <a href="adminHome" class="hvr-bubble-left ">Go Back</a>
+        <a href="adminlostpostings" class="hvr-bubble-right2 ">All lost postings</a>
+        </div>
+    </body>
+</hmtl>

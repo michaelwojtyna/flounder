@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<hmtl>
+  <head>
+   <link rel="stylesheet" type="text/css" href="static/floundercss2.css" />
+
+    <meta http-equiv="Content-Type;refresh" content="text/html;10 charset=UTF-8" />
+    <title>Flounder.</title>
+  </head>
+  <body>
+    <h1>Welcome to Flounder Admin {{userLogged}}.</h1>
+
+
+    <!--<a href="home.html" id="login"> Login</a>-->
+    <!--<h1>Welcome to Flounder</h1>-->
+    <a href="adminlostit" class="hvr-wobble-vertical"> Lost it!</a>
+    <a href="adminfoundit" class="hvr-wobble-vertical2">Found it!</a>
+            <!--<div class="center">                                                                     
+        <a href="home.html" id="lost"> Lost it!</a>                                                  
+        <a href="home.html" id="found">Found it!</a>                                                 
+            </div>-->
+
+	    <div class="center2">
+	      <a href="adminmanagePosts" class="hvr-float">Manage Your Posts!</a>
+      </div>
+      <div class="center2">
+	      <a href="home" class = "hvr-float"> Sign Out!</a>
+	    </div>
+
+<h3>Rules for Posting:</h3>
+
+    <ol>
+      <li>Be descriptive. The more descriptive you are, the better.</li>
+      <li>No harrassment. Respect one another.</li>
+      <li>No spam. Posts are monitored by admins and can be removed for violations.</li>
+    </ol>
+	    
+
+   
+    <h3>Manage All Posts:</h3>
+       <form id="form"  method ="post">
+          <table  class="tableHome"> 
+          <tr>   
+            <th>Delete</th>
+            <th>Status</th>
+            <th>Poster</th>
+            <th>Item</th>
+            <th>Message</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Picture</th>
+	    <th>Contact</th>
+          </tr>
+	  <tr>
+	    {% for posts in postings %}
+
+	    <td><input type="radio" name="deleteAll" value="{{posts.value}}"></td>
+	    <td>{{posts.status}}</td>
+	    <td>{{posts.userid}}</td>
+	    <td>{{posts.item}}</td>
+	    <td>{{posts.message}}</td>
+	    <td>{{posts.description}}</td>
+	    <td>{{posts.date}}</td>
+	    {% if posts.status=='lost'%}
+	    <td> <a href="../pictures/nopics3.png">
+		<img src="../pictures/nopics3.png" width="54px" height="54px"/></td>
+	    {% else %}
+	    <td> <a href="../pictures/{{posts.value}}.png">
+		<img src="../pictures/{{posts.value}}.png" width="54px" height="54px"/>
+		{% endif %}
+	    </a></td>
+	    <td> <a href="mailto:{{(userdao.selectByUserid(posts.userid)).email}}">
+		<img src="../pictures/emailss2.png" height=54px width=54px/>
+	    </a></td>
+	  </tr>
+	  {% endfor %}
+	  
+
+	  
+    </table>
+<input class ="button" type="submit" id="submit" name="submit" value="Delete"/>      
+      </form>
+    <h3>About Flounder:</h3>
+    <p> Flounder is designed to help you find your stuff. If you lost it, with the help of Flounder and your fellow students, you can find it.</p>
+
+
+  </body>
+</hmtl>
+
+      

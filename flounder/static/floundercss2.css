@@ -1,0 +1,456 @@
+html{
+     
+background: linear-gradient(white, deepskyblue);
+}
+img{
+    height: 64px;
+    width: 64px
+}
+
+h1{text-align: center; font-family: 'Helvetica', sans-serif; font-size: 36pt; 
+    font-style:oblique;
+    font-weight: normal;
+    text-shadow: 0.1em 0.1em .3em black;
+}
+li{
+   font-family: 'Helvetica', sans-serif; font-size: 12pt; 
+    font-weight: normal;
+}
+
+h2{text-align: center; font-family: "Trebuchet MS", Helvetica, sans-serif; font-size: 36pt}
+
+h3{text-decoration:underline;
+    font-family: "Trebuchet MS", Helvetica, sans-serif; font-size: 16pt;
+    text-shadow: 3px 2px white}
+
+p{font-family: 'Helvetica', sans-serif; font-size: 12pt; 
+    font-weight: normal;
+padding-left: 1.250001em}
+
+/*form{background-color: lightpink;}*/
+table{
+    
+    width: 100%;
+}
+table, th, td{
+    
+    border: 1px solid black;
+    
+}
+
+td{
+    text-align: center; font-family: 'Helvetica', sans-serif; font-size: 12pt; 
+    font-weight: normal;
+}
+
+th{
+     text-align: center; font-family: 'Helvetica', sans-serif; font-size: 12pt; 
+    font-weight: bold;
+    border:1px solid black;
+    background-color:aquamarine;
+}
+.center{
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center2{
+  height: 5em;
+  border: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center 
+}
+.whatevs{
+margin-left:50px;
+}
+.center3{
+  height: -15em;
+  display: flex;
+  
+  align-items: center;
+  justify-content: center; 
+}
+
+#submit{
+    background-color:rgb(133, 173, 32);
+    border: none;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 8px 32px;
+    text-decoration: bold;
+    margin: 8px 10px;
+    border-radius: 12px;
+    font-size: 20pt;
+    border: 2px solid #ffffff;
+    cursor: pointer;}
+
+input[type=text]:focus{border: 3px solid #555;
+}
+
+/*################START FANCY LINKS/*################*/
+
+/* Wobble Vertical LOST*/
+@-webkit-keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.hvr-wobble-vertical {
+     float: left;
+    background-color: rgb(96, 171, 222);
+    border: 2px solid #000000;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 15px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 12px;
+    
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+  -webkit-animation-name: hvr-wobble-vertical;
+  animation-name: hvr-wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+
+/* Wobble Vertical FOUND */
+@-webkit-keyframes hvr-wobble-vertical2 {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes hvr-wobble-vertical2 {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.hvr-wobble-vertical2 {
+   float: right;
+    background-color: rgb(250, 117, 34);
+    border: 2px solid #000000;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 12px;
+    
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-wobble-vertical2:hover, .hvr-wobble-vertical2:focus, .hvr-wobble-vertical2:active {
+  -webkit-animation-name: hvr-wobble-vertical2;
+  animation-name: hvr-wobble-vertical2;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Float LOGIN */
+.hvr-float {
+    background-color: rgb(133, 173, 32);
+    border: 2px solid #000000;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 15px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 12px;
+    
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+/* Bubble Right SUBMIT ###Not quite working### */
+.hvr-bubble-right {
+    background-color:rgb(133, 173, 32);
+    border: 2px solid #ffffff;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 8px 50px;
+    border-radius: 12px;
+    font-size: 20pt;
+    cursor: pointer;
+    
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+.hvr-bubble-right:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  top: calc(50% - 10px);
+  right: 0;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent #85ad20 transparent transparent;
+}
+.hvr-bubble-right:hover:before, .hvr-bubble-right:focus:before, .hvr-bubble-right:active:before {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+/* Bubble Right CREATE ACCOUNT */
+.hvr-bubble-right2 {
+    background-color:rgb(96, 171, 222);
+    border: 2px solid #ffffff;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 13px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 8px 10px;
+    border-radius: 12px;
+    font-size: 20pt;
+    cursor: pointer;
+    
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+.hvr-bubble-right2:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  top: calc(50% - 10px);
+  right: 0;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #60abde;
+}
+.hvr-bubble-right2:hover:before, .hvr-bubble-right2:focus:before, .hvr-bubble-right2:active:before {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+/*Bubble Left GO BACK*/
+.hvr-bubble-left {
+    background-color: rgb(250, 117, 34);
+    border: 2px solid #ffffff;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 12px;
+    
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+.hvr-bubble-left:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  top: calc(50% - 10px);
+  left: 0;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #fa7522 transparent transparent;
+}
+.hvr-bubble-left:hover:before, .hvr-bubble-left:focus:before, .hvr-bubble-left:active:before {
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+
+/*Icon Back BROKEN*/
+.hvr-icon-back {
+    background-color: rgb(250, 117, 34);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Trebuchet MS", Helvetica, sans-serif; font-size: 16pt;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 12px;
+    
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  padding-left: 2.2em;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+.hvr-icon-back:before {
+  content: "\f137";
+  position: absolute;
+  left: 1em;
+  padding: 0 1px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif; font-size: 16pt;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-icon-back:hover:before, .hvr-icon-back:focus:before, .hvr-icon-back:active:before {
+  -webkit-transform: translateX(-4px);
+  transform: translateX(-4px);
+}

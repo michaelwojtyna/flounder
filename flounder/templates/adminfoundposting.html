@@ -1,0 +1,45 @@
+<DOCTYPE html>
+  <html>
+    <link rel="stylesheet" type="text/css" href="static/floundercss2.css" />
+    <body>
+      <h1>Found Posts.</h1>
+<table  class="tableHome">
+        <tr>
+            <th>Status</th>
+            <th>Poster</th>
+            <th>Item</th>
+            <th>Message</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Picture</th>
+            <th>Contact</th>
+        </tr>
+        {% for posts in postings %}
+        
+        <tr>
+            <td>{{posts.status}}</td>
+            <td>{{posts.userid}}</td>
+            <td>{{posts.item}}</td>
+            <td>{{posts.message}}</td>
+            <td>{{posts.description}}</td>
+            <td>{{posts.date}}</td>
+	    
+            <td>
+		<a href="../pictures/{{posts.value}}.png">
+		  <img src="../pictures/{{posts.value}}.png" width="54px" height="54px"/>
+            </a></td>
+            <td> <a href="mailto:{{(userdao.selectByUserid(posts.userid)).email}}">
+            <img src="../pictures/emailss2.png" height=64px width=64px/>
+            </a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+      </form>
+      <a href = "adminHome" class = "hvr-bubble-left">Go Back!</a>
+    </body>
+  </html>
+
+
+  

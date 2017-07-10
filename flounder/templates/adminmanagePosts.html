@@ -1,0 +1,54 @@
+<DOCTYPE html>
+  <html>
+    <link rel="stylesheet" type="text/css" href="static/floundercss2.css" />
+    
+    <body>
+      <h1>Manage Your Posts</h1>
+
+      <form id="form"  method ="post">
+          <table  class="tableHome"> 
+          <tr>   
+            <th>Delete</th>
+            <th>Status</th>
+            <th>Poster</th>
+            <th>Item</th>
+            <th>Message</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Picture</th>
+        </tr>
+	{% for posts in postings %}
+	
+          
+       
+        
+        <tr>
+            <td><input type="radio" name="delete" value="{{posts.value}}"></td>
+            <td>{{posts.status}}</td>
+            <td>{{posts.userid}}</td>
+            <td>{{posts.item}}</td>
+            <td>{{posts.message}}</td>
+            <td>{{posts.description}}</td>
+            <td>{{posts.date}}</td>
+            {% if posts.status=='lost'%}
+	    <td> <a href="../pictures/nopics3.png">
+		<img src="../pictures/nopics3.png" width="54px" height="54px"/></td>
+	    {% else %}
+	    <td> <a href="../pictures/{{posts.value}}.png">
+		<img src="../pictures/{{posts.value}}.png" width="54px" height="54px"/>
+		{% endif %}
+		
+            
+           
+        </tr>
+        {% endfor %}
+    </table>
+	<input class ="button" type="submit" id="submit" name="submit" value="Delete"/>
+
+      </form>
+      <a href = "adminHome" class = "hvr-bubble-left">Go Back!</a>
+    </body>
+  </html>
+  
+  
+    
